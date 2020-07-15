@@ -7,10 +7,16 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
+// Order
 type Order struct {
 	gorm.Model
 	Oid  int
-	time string
+	Time int64
 	Uid  int
 	Mid  int
+}
+
+// AddOrder
+func AddOrder(o Order) error {
+	return DB.Create(&o).Error
 }

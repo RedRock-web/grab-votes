@@ -15,3 +15,14 @@ type Movie struct {
 	Address string
 	Num     int
 }
+
+func RemoveMovie(mid int) error {
+
+}
+
+func GetMovieNum(mid int) (int, error) {
+	var m Movie
+
+	err := DB.Table("movies").Where("mid = ?", mid).First(&m).Error
+	return m.Num, err
+}

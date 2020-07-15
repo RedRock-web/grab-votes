@@ -1,0 +1,2 @@
+Error:2020/07/15 23:47:15 rabbit_mq.go:59: 创建连接错误！:Exception (403) Reason: "username or password not allowed"
+Error:2020/07/15 23:47:15 rabbit_mq.go:59: 获取channel失败！:Exception (504) Reason: "channel/connection is not open"

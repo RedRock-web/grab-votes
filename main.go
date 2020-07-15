@@ -4,9 +4,13 @@
 package main
 
 import (
-	"github.com/streadway/amqp"
+	"grab-votes/model"
+	"grab-votes/router"
+	"grab-votes/service"
 )
 
 func main() {
-	amqp.Dial()
+	model.InitDB()
+	service.InitService()
+	router.InitRouter()
 }
